@@ -1,0 +1,11 @@
+/* Configura os d�logos que aparecem */
+
+.root {
+	-fx-font-family: "Baskerville Old Face";
+	-fx-font-size: 24px;
+	-fx-background-color: rgb(153,0,0);
+}
+
+.label {
+	-fx-text-fill: white;
+}

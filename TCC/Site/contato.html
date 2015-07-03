@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aulas</title>
+<link rel="stylesheet" href="arquivo_css.css">
+</head>
+<style>
+textarea { resize: none };
+</style>
+<body>
+<div id="div_main" align="center">
+	<div id="banner">
+	</div>
+	<div id="fundoMenu">
+		<ul id="menu">
+			<li id="menu"><a href="inicio.html" class="linksMenu">In&iacute;cio</a></li>
+			<li id="menu"><a href="aulas.html" class="linksMenu">Aulas</a></li>
+			<li id="menu"><a href="localizacao.html" class="linksMenu">Localiza&ccedil;&atilde;o</a></li>
+			<li id="menu"><a href="contato.html" class="linksMenu">Contato</a></li>
+            <li id="menu"><a href="eventos.php" class="linksMenu">Eventos</a></li>
+		</ul>
+	</div>
+	<div style="height: 100%;">
+		<br>
+		<table>
+			<form action="" method="POST" name="contato">
+				<tr height="70">
+					<td width="200">Nome: </td>
+					<td><input type="text" name="nome" id="caixaDeTexto" size="27"></td>
+				</tr>
+				<tr height="70">
+					<td width="200">E-mail: </td>
+					<td><input type="text" name="email" id="caixaDeTexto" size="27"></td>
+				</tr>
+				<tr height="70">
+					<td width="200">Telefone: </td>
+					<td><input type="text" name="telefone" id="caixaDeTexto" size="27"></td>
+				</tr>
+				<tr height="70">
+					<td width="200">Celular: </td>
+					<td><input type="text" name="celular" id="caixaDeTexto" size="27"></td>
+				</tr>
+				<tr height="70">
+					<td width="200">Mensagem: </td>
+					<td><textarea cols="30" rows="4" id="caixaDeTexto"></textarea></td>
+				</tr>
+				<tr height="70">
+					<td width="200"></td>					
+                    	<td>
+                   		<a href='javascript: document.forms["contato"].submit();'><img src="IMAGENS/btn_enviar.png" align="left"></a>
+                    	<a href='javascript: document.forms["contato"].reset();'><img src="IMAGENS/button_limpar_campos.png" align="right"></a>
+               	  </td>                    
+			  </tr>
+			</form>
+		</table>
+	</div>
+</div>
+</body>
+</html>

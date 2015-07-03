@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-07-02T20:06:53 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MatriculasMensal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c78e09e0-77b7-476a-b8ea-6fdd8f995e0f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="OrionMusic.xml"/>
+	<parameter name="codAluno" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `Matricula`.cod,
+	`Aluno`.nome,
+	`Disciplina`.nome,
+	`Turma`.`descricaoTurma`,
+	`Matricula`.valoraula,
+	`Matricula`.`valorFormatado`,
+	`Aluno`.cod,
+	`Matricula`.`codAluno`,
+	`Matricula`.`codTurma`,
+	`Matricula`.`arquivoMorto`,
+	`Disciplina`.cod,
+	`Turma`.`codDisciplina`,
+	`Turma`.`codTurma`
+FROM `Matricula`,
+	`Aluno`,
+	`Disciplina`,
+	`Turma`
+WHERE 
+	 `Aluno`.cod = `Matricula`.`codAluno` 
+	 AND `Disciplina`.cod = `Turma`.`codDisciplina` 
+	 AND `Turma`.`codTurma` = `Matricula`.`codTurma` 
+	 AND `Matricula`.`arquivoMorto` = 'NULL' 
+	 AND `Aluno`.cod = $P{codAluno} ]]>
+	</queryString>
+	<field name="cod" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_3" class="java.lang.String"/>
+	<field name="descricaoTurma" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valoraula" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorFormatado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="valoraula1" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{valoraula}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<image>
+				<reportElement x="237" y="7" width="305" height="80" uuid="63367584-52b7-424f-bfae-9eefd103a73b"/>
+				<imageExpression><![CDATA["reports/bannerCasaDaMusica.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="32" y="8" width="50" height="50" uuid="df8d7653-734f-445b-946f-e13259c73802"/>
+				<imageExpression><![CDATA["reports/iconePrincipalSemCirculo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="11" y="67" width="100" height="23" uuid="ebea966d-982d-485d-89d1-090108b3015f"/>
+				<imageExpression><![CDATA["reports/IconeTelaInicial.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="13" width="250" height="22" uuid="423dc866-ab41-492e-ac4d-4c8fea393eef"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="18"/>
+				</textElement>
+				<text><![CDATA[Relatório de Matrículas Por Aluno]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="111" height="30" backcolor="#B0B0B0" uuid="bacdfea4-5eae-46af-aa73-cfeb40aa18e5"/>
+				<box padding="1">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<text><![CDATA[Código da Matrícula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="2" width="111" height="30" backcolor="#B0B0B0" uuid="de861a92-8b22-4566-9e69-9021e9541f6f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<text><![CDATA[Nome do Aluno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="2" width="111" height="30" backcolor="#B0B0B0" uuid="9252ef19-ae7c-40d6-bc0d-83bd19697af9"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<text><![CDATA[Disciplina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="2" width="111" height="30" backcolor="#B0B0B0" uuid="f8e2d12c-4eea-4074-9658-91f2647c3927"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<text><![CDATA[Turma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="2" width="111" height="30" backcolor="#B0B0B0" uuid="b17ec5c8-5a5d-4929-ac8c-d97d769a95a2"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor da Aula]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="30" backcolor="#E3E1E1" uuid="db45be5a-4a06-4290-a868-910a378bc5bf"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="30" backcolor="#E3E1E1" uuid="eb0d3c68-2f89-4794-a51a-a36b32c79dc8"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="30" backcolor="#E3E1E1" uuid="53fc9203-3b2f-4d41-9ccf-379f63fb7d48"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COLUMN_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="30" backcolor="#E3E1E1" uuid="6d7b0401-7de6-43f2-a4b3-c70349263d41"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricaoTurma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="30" backcolor="#E3E1E1" uuid="ff5c8eb4-a150-4c01-af3c-85a2e563bb54"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorFormatado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="11" width="111" height="30" backcolor="#B0B0B0" uuid="28758f88-403b-42a1-9b00-910f26d307c1"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="444" y="11" width="111" height="30" backcolor="#E3E1E1" uuid="3efb58d3-8d6b-4196-8567-4f48e31a5a7d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["R$ "+new DecimalFormat("#,###.00").format($V{valoraula1})]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

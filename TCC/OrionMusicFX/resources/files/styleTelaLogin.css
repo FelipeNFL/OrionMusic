@@ -1,0 +1,14 @@
+/* Configura os d�logos que aparecem */
+
+.root {
+	/*-fx-background-image: url('../../resources/images/fundos/fundoCarregamentoELogin.png');*/
+	-fx-background-position: center;
+	-fx-background-size: stretch ;
+	-fx-padding: 20px;
+	-fx-padding: 15px;
+	-fx-hgap: 15px;
+	-fx-vgap: 15px;
+	-fx-font-family: "Baskerville Old Face";
+	-fx-font-size: 16px;
+}
+

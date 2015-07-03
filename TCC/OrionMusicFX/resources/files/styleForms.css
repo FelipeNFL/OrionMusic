@@ -1,0 +1,40 @@
+/* Configura os formulários que aparecem ao lado dos menus */
+
+#principalCadastro {
+	-fx-background-image: url('../images/fundos/Cadastro.png');
+	-fx-padding: 15px;
+	-fx-background-position: center ;
+	-fx-background-size: stretch ;
+}
+
+#principalCronograma {
+	-fx-background-image: url('../images/fundos/Cronograma.png');
+	-fx-background-color: white;
+	-fx-padding: 15px;
+	-fx-background-position: center ;
+	-fx-background-size: stretch ;
+	
+	/* Botão padrão */
+}
+
+#principalAcompanhamento {
+	-fx-background-image: url('../images/fundos/Acompanhamento.png');
+	-fx-padding: 15px;
+	-fx-background-position: center ;
+	-fx-background-size: stretch ;
+}
+
+#principal {
+	-fx-background-color: white;
+	-fx-font-family: "Baskerville Old Face";
+	-fx-font-size: 16px;
+	-fx-padding: 15px;
+}
+
+.button {
+	-fx-font-size: 20px;
+}
+
+.combo-box {
+/*Não apague isso! Limpa o layout de uns combo-box loucos aí */	
+}

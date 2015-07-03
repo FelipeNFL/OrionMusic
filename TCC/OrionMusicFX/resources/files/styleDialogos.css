@@ -1,0 +1,20 @@
+/* Configura os diálogos que aparecem */
+
+.root {
+	-fx-vgap: 15px;
+	-fx-hgap: 15px;
+	-fx-padding: 15px;
+	-fx-font-family: "Baskerville Old Face";
+	-fx-background-image: url('../../resources/images/fundoMenuJanelas.png');
+	-fx-background-position: center ;
+	-fx-background-size: stretch ;
+	-fx-font-size: 16px;
+}
+
+.label {
+	-fx-text-fill: white;
+}
+
+.button {
+	-fx-font-size: 18px;
+}

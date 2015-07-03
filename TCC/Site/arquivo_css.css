@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image: url(IMAGENS/FUNDO_front.png);
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	color: #CCC;
+	font-size: 30px;
+	text-shadow: 2px 1px 1px #000;
+	font-weight: 700;
+	font-family: "Times New Roman";
+}
+	
+#div_main {
+	margin: 0 auto;
+	background-image: url(IMAGENS/div_image.png);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	background-size: cover;
+	width: 950px;
+	position: inherit;
+	height: alt;
+	left: 50px;
+	right: 50px;
+	top: 0%;
+}
+
+#fundoMenu {
+	background-image: url(IMAGENS/fundoMenu.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;	
+	height: 75px;
+	width: 950px;
+}
+
+#banner {
+	background-image: url(IMAGENS/banner.png);
+
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0px;
+	height: 350px;
+	width: 100%;
+	
+}
+
+#menu {
+	list-style-type: none;
+	display: inline;
+}
+
+#menu {
+	color: #999;
+	font-size: 35px;
+	padding-right: 30px;
+	padding-left: 27.5px;
+	vertical-align: sub;
+	font-family: "Baskerville Old Face";
+	text-shadow: none;
+}
+
+a.linksMenu:link, a.linksMenu:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+	/*text-shadow: 10px 10px 0px #000000;*/
+	text-shadow:
+	1px 1px 0 #CCC,
+	2px 2px 0 #CCC,
+	3px 3px 0 #000,
+	4px 4px 0 #000,
+	5px 5px 0 #000,
+	6px 6px 0 #000; */
+}
+
+a.linksMenu:hover {
+	text-decoration: none; 
+	color: #FFFFFF;
+   	text-shadow: 0px 0px 30px #FFFFFF;
+}
+
+a.linksMenu:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#caixaDeTexto {
+	font-family: "Times New Roman";
+	font-size: 30px;
+	border-radius:12px;
+	border: 1px solid #000;
+	background-color: #fff58f;
+}
+
+#alertaAulas {
+	font-family:MoolBoran;
+	font-size: 25px;
+	color:#000;
+	text-shadow: none;
+	font-style:normal;
+}
+
+
+#AulasMaterias {
+	font-family:Times New Roman;
+	font-size:24px;
+	text-shadow:none;
+	color:#CCC;
+	font-style:normal;
+}
+
+#inicioTexto {
+	font-family:;
+	color:#CCC;
+	font-size:24px;
+	font-style:normal;
+}
+
+#localizacaoTexto {
+	font-family:;
+	color:#CCC;
+	font-size:24px;
+	font-style:normal;
+}

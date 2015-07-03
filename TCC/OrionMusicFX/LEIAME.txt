@@ -1,0 +1,9 @@
+############################################################################ ATENÇÃO! #################################################################################################
+
+-> O sistema deve ser executado usando a porta 3307 (Sem exceções - A não ser que você mude as portas nas rotinas de backup e relatórios =) )
+
+-> Por conta das rotinas de backup, o sistema não está preparado para rodar em outras plataformas além do Windows. Essas rotinas não foram adaptadas pois o cliente utiliza Windows.
+
+-> Não é necessário script de banco de dados. Basta criar o banco, acesar o arquivo src/META-INF/persistence.xml e trocar o value da propriedade "javax.persistence.schema-generation.database.action" para "drop-and-create".
+
+-> http://orionmusic.esy.es
