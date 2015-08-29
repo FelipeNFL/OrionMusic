@@ -24,8 +24,6 @@ public class Main extends Application {
 		
 		tarefaBackup.executarTarefaBackup();
 		
-		//telaCarregamento.getTelaAdministrador().showAndWait();
-		
 		do {
 			telaCarregamento.getTelaAdministrador().resetarLogoff();
 			telaCarregamento.getTelaNormal().resetarLogoff();
@@ -54,5 +52,7 @@ public class Main extends Application {
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
+		
+		System.exit(0);
 	}
 }

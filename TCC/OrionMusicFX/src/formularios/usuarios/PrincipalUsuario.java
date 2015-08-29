@@ -175,6 +175,7 @@ public class PrincipalUsuario extends Stage implements EventHandler<Event>{
 			this.tabela.getSelectionModel().clearSelection(); //Limpa as seleções	
 			this.btnModificar.setDisable(true);
 			this.btnExcluir.setDisable(true);
+			this.preencherTabelaComTodosResultados();
 		}
 		else if(e.getSource() == this.txtPesquisa){ // Se o txtNome for acionado
 			if(this.txtPesquisa.getText().isEmpty() == false){ //Verifica se o txtNome está vazio

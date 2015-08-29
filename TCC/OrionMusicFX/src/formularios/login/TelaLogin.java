@@ -15,6 +15,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.WindowEvent;
 
@@ -78,11 +80,24 @@ public class TelaLogin extends Dialogo implements EventHandler<Event> {
 		
 		this.layout.getStylesheets().add(FolhasEstilo.getCaminhoStyleDialogo());
 		this.getIcons().add(new Image(Icones.getCaminhoIconePrincipal()));
+		
+		this.layout.setOnKeyPressed(new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent event) {
+				if(event.getCode() == KeyCode.ENTER){
+					acionarBotaoLogin();
+				}
+			}
+		});
 	}
 	
 	public void limparCampos(){
 		txtLogin.setText("");
 		txtSenha.setText("");
+	}
+	
+	public void acionarBotaoLogin(){
+		this.handle(new Event(this.btnLogar, null, null));
 	}
 	
 	@Override

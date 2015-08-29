@@ -78,5 +78,18 @@ public class TelaCarregamentoInicial extends TelaCarregamento {
 				executarTarefaBanco.start();
 			}
 		});
+		
+		this.setOnCloseRequest(new EventHandler<WindowEvent>() {
+			@Override
+			public void handle(WindowEvent event) {
+				try {
+					this.finalize();
+				} catch (Throwable e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.exit(0);
+			}
+		});
 	}
 }
